@@ -10,7 +10,7 @@ public class Swordman {
         this.exp = 0;
         this.maxexp = 50;
         this.level = 0;
-        this.attack = 10;
+        this.attack = 10; // attackmonstor
 
     }
 
