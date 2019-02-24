@@ -4,9 +4,10 @@ import java.util.Scanner;
 public class Deadline {
 
     public static void main(String[] args) {
-        Boolean funrun;
+        int number;
+        boolean run;
+        run = true;
 
-        Boolean run;
         Scanner input = new Scanner(System.in);
         Novice novice = new Novice("100");
         // Item items = new Item();
@@ -19,10 +20,10 @@ public class Deadline {
         // System.out.println();
         //
 
-        funrun = true;
+        
         run = true;
 
-        while (funrun) {
+        while (run) {
             System.out.println();
             System.out.println("Menu");
             System.out.println("Enter 1 : Novice");
@@ -35,14 +36,32 @@ public class Deadline {
             int enter = input.nextInt();
 
             if (enter == 1) {
-                novice.showInfo();
+                System.out.println("Plese Enter Number For Novice Do");
+                System.out.println("1 For Kill Monter");
+                System.out.println("2 For Sleep");
+                System.out.println("3 For EatHerbs");
+                System.out.println("0 For End");
+                int Key = input.nextInt();
 
+                if (Key == 1) {
+                    System.out.println("Your level is " + novice.killmonster());
+                } else if (Key == 2) {
+                    System.out.println("Your Hp is " + novice.sleep());
+                } else if (Key == 3) {
+                    System.out.println("Your Hp is " + novice.eatherbs());
+                }
+                
+                if (Key == 0) {
+                    run = false;
+                    System.out.println("Exit");
+                }
             }
+
             if (enter == 2) {
 
                 System.out.println("Enter 1 : add herb");
                 System.out.println("Enter 2 : add sword");
-                System.out.println("Enter 3 : add amor");
+                System.out.println("Enter 3 : add knife");
                 System.out.print("Please Enter the number: ");
                 int key = input.nextInt();
 
@@ -53,7 +72,7 @@ public class Deadline {
                     novice.addItem("sword");
                 }
                 if (key == 3) {
-                    novice.addItem("amor");
+                    novice.addItem("knife");
                 }
                 if (key == 0) {
                     run = false;
@@ -67,7 +86,7 @@ public class Deadline {
 
             }
             if (enter == 0) {
-                funrun = false;
+                run = false;
                 System.out.println();
             }
 

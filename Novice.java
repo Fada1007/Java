@@ -5,6 +5,7 @@ public class Novice {
     private int level;
     private int maxexp;
     private Bags bag;
+    
 
     public Novice(String value) {
         this.name = "Vardea";
@@ -12,13 +13,13 @@ public class Novice {
         this.exp = 0;
         this.maxexp = 50;
         this.level = 0;
-        this.attack = 10;
-
+        
     }
 
     public int levelUp() {
-        level = level + 1;
+        level = level + 1;       
         return level;
+
     }
 
     public int sleep() {
@@ -50,33 +51,6 @@ public class Novice {
         return hp;
     }
 
-    }
-
-    public static void main(String[] args) {
-        Novice novice = new Novice();
-        Scanner Sc = new Scanner(System.in);
-        int number;
-        System.out.println("Plese Enter Number For Novice Do");
-        System.out.println("1 For Kill Monter");
-        System.out.println("2 For Sleep");
-        System.out.println("3 For EatHerbs");
-        System.out.println("0 For End");
-
-        do {
-            System.out.print("Enter number : ");
-            number = Sc.nextInt();
-
-            if (number == 1) {
-                System.out.println("Your level is " + novice.killmonster());
-            } else if (number == 2) {
-                System.out.println("Your Hp is " + novice.sleep());
-            } else if (number == 3) {
-                System.out.println("Your Hp is " + novice.eatherbs());
-            }
-
-        } while (number != 0);
-    }
-
     public void addItem(String itemName) {
         this.bag.addItem(itemName);
 
@@ -86,3 +60,6 @@ public class Novice {
         this.bag.showItem();
         System.out.println();
     }
+
+}
+
